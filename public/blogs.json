@@ -1,0 +1,80 @@
+[
+  {
+    "bookId": 1,
+    "bookName": "The Midnight Library",
+    "author": "Matt Haig",
+    "image": "https://m.media-amazon.com/images/I/81vpsIs58WL.jpg",
+    "review": "A thought-provoking story that explores the choices we make in life and their consequences.",
+    "totalPages": 304,
+    "rating": 4.2,
+    "category": "Fiction",
+    "tags": ["Philosophy", "Fantasy"],
+    "publisher": "Canongate Books",
+    "yearOfPublishing": 2020
+  },
+  {
+    "bookId": 2,
+    "bookName": "Becoming",
+    "author": "Michelle Obama",
+    "image": "https://images-na.ssl-images-amazon.com/images/I/81h2gWPTYJL.jpg",
+    "review": "An inspiring memoir that takes readers on a journey through the life of the former First Lady.",
+    "totalPages": 448,
+    "rating": 4.9,
+    "category": "Biography",
+    "tags": ["Inspiration", "Politics"],
+    "publisher": "Crown Publishing Group",
+    "yearOfPublishing": 2018
+  },
+  {
+    "bookId": 3,
+    "bookName": "Educated",
+    "author": "Tara Westover",
+    "image": "https://images.penguinrandomhouse.com/cover/9780399590504",
+    "review": "A gripping and emotional memoir about the power of education and self-discovery.",
+    "totalPages": 334,
+    "rating": 4.7,
+    "category": "Memoir",
+    "tags": ["Education", "Survival"],
+    "publisher": "Random House",
+    "yearOfPublishing": 2018
+  },
+  {
+    "bookId": 4,
+    "bookName": "The Silent Patient",
+    "author": "Alex Michaelides",
+    "image": "https://images.macmillan.com/folio-assets/macmillan_us_frontbookcovers_1000H/9781250301697.jpg",
+    "review": "A psychological thriller that keeps you on the edge of your seat until the very last page.",
+    "totalPages": 325,
+    "rating": 4.5,
+    "category": "Thriller",
+    "tags": ["Suspense", "Mystery"],
+    "publisher": "Celadon Books",
+    "yearOfPublishing": 2019
+  },
+  {
+    "bookId": 5,
+    "bookName": "Where the Crawdads Sing",
+    "author": "Delia Owens",
+    "image": "https://images.penguinrandomhouse.com/cover/9780735219106",
+    "review": "A beautifully written novel that intertwines mystery with a deep sense of place and character.",
+    "totalPages": 370,
+    "rating": 4.8,
+    "category": "Fiction",
+    "tags": ["Mystery", "Nature"],
+    "publisher": "G.P. Putnam's Sons",
+    "yearOfPublishing": 2018
+  },
+  {
+    "bookId": 6,
+    "bookName": "Atomic Habits",
+    "author": "James Clear",
+    "image": "https://images-na.ssl-images-amazon.com/images/I/91bYsX41DVL.jpg",
+    "review": "A practical guide to building good habits and breaking bad ones through small, incremental changes.",
+    "totalPages": 320,
+    "rating": 4.8,
+    "category": "Self-Help",
+    "tags": ["Productivity", "Psychology"],
+    "publisher": "Avery",
+    "yearOfPublishing": 2018
+  }
+]
