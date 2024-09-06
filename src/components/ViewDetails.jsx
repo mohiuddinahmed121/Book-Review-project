@@ -1,11 +1,22 @@
 import React from "react";
 import { useLoaderData, useParams } from "react-router-dom";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+import { saveBookWishList } from "./localstorage";
 
 const ViewDetails = () => {
   const books = useLoaderData();
   const { bookId } = useParams();
   const bookIdInt = parseInt(bookId);
   const book = books.find((book) => book.bookId === bookIdInt);
+
+  const handleReadBook = () => {
+    toast("You have Read the Book");
+  };
+  const handleWishList = () => {
+    saveBookWishList(bookIdInt);
+    toast("added to WishList  successfully");
+  };
 
   return (
     <div className="flex items-center justify-between">
@@ -48,10 +59,21 @@ const ViewDetails = () => {
           </p>
         </div>
         <div className="flex gap-4">
-          <a className="btn border-gray-500 bg-white text-black">Read</a>
-          <a className="btn bg-cyan-500 text-white">Wishlist</a>
+          <buttton
+            onClick={handleReadBook}
+            className="btn border-gray-500 bg-white text-black"
+          >
+            Read
+          </buttton>
+          <button
+            onClick={handleWishList}
+            className="btn bg-cyan-500 text-white"
+          >
+            Wishlist
+          </button>
         </div>
       </div>
+      <ToastContainer />
     </div>
   );
 };

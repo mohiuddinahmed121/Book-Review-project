@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { CiStar } from "react-icons/ci";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 
 const Home = () => {
   const [booksData, setBooksData] = useState([]);
@@ -23,9 +23,12 @@ const Home = () => {
             <h1 className="text-5xl font-bold">
               Books to freshen up <br /> your bookshelf
             </h1>
-            <button className="btn bg-green-500 text-white mt-10">
+            <NavLink
+              to="/listedbook"
+              className="btn bg-green-500 text-white mt-10"
+            >
               View The List
-            </button>
+            </NavLink>
           </div>
         </div>
       </div>
