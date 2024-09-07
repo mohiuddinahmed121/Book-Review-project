@@ -11,11 +11,50 @@ const ViewDetails = () => {
   const book = books.find((book) => book.bookId === bookIdInt);
 
   const handleReadBook = () => {
-    toast("You have Read the Book");
+    saveBookReadList(bookIdInt);
   };
   const handleWishList = () => {
     saveBookWishList(bookIdInt);
-    toast("added to WishList  successfully");
+  };
+
+  const getStoredBookWishList = () => {
+    const storedBookWishList = localStorage.getItem("book-wishList");
+    if (storedBookWishList) {
+      return JSON.parse(storedBookWishList);
+    }
+    return [];
+  };
+
+  const saveBookWishList = (id) => {
+    const storedBookWishList = getStoredBookWishList();
+    const isExists = storedBookWishList.find((bookId) => bookId === id);
+    if (!isExists) {
+      storedBookWishList.push(id);
+      localStorage.setItem("book-wishList", JSON.stringify(storedBookWishList));
+      toast("added to WishList  successfully");
+    } else {
+      toast("data already exists");
+    }
+  };
+
+  const getStoredBookReadList = () => {
+    const storedBookWishList = localStorage.getItem("book-readList");
+    if (storedBookWishList) {
+      return JSON.parse(storedBookWishList);
+    }
+    return [];
+  };
+
+  const saveBookReadList = (id) => {
+    const storedBookWishList = getStoredBookReadList();
+    const isExists = storedBookWishList.find((bookId) => bookId === id);
+    if (!isExists) {
+      storedBookWishList.push(id);
+      localStorage.setItem("book-readList", JSON.stringify(storedBookWishList));
+      toast("added to ReadList  successfully");
+    } else {
+      toast("data already exists");
+    }
   };
 
   return (

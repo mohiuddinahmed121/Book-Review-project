@@ -1,5 +1,3 @@
-import { json } from "react-router-dom";
-
 const getStoredBookWishList = () => {
   const storedBookWishList = localStorage.getItem("book-wishList");
   if (storedBookWishList) {
@@ -17,4 +15,28 @@ const saveBookWishList = (id) => {
   }
 };
 
-export { getStoredBookWishList, saveBookWishList };
+// -------------getStoredBookReadList-----------------------
+
+const getStoredBookReadList = () => {
+  const storedBookReadList = localStorage.getItem("book-readList");
+  if (storedBookReadList) {
+    return JSON.parse(storedBookReadList);
+  }
+  return [];
+};
+
+const saveBookReadList = (id) => {
+  const storedBookReadList = getStoredBookReadList();
+  const isExists = storedBookReadList.find((bookId) => bookId === id);
+  if (!isExists) {
+    storedBookReadList.push(id);
+    localStorage.setItem("book-readList", JSON.stringify(storedBookReadList));
+  }
+};
+
+export {
+  getStoredBookWishList,
+  saveBookWishList,
+  getStoredBookReadList,
+  saveBookReadList,
+};
